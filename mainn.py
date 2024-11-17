@@ -52,9 +52,12 @@ def main():
     
 
     def buttons(x,y):
-        Submitbutton = Rectangle(Point(x,y), Point (x+30,y-30))
+        Submitbutton = Rectangle(Point(x,y), Point (x+60,y-30))
         Submitbutton.setFill(color_rgb(255,0,0))
+        #enter=Text(Point(x+300,y-15),'enter')
+        #enter.setSize(20)
         Submitbutton.draw(win)
+        #enter.draw(win)
         return Submitbutton
 
     #buttons()
@@ -129,10 +132,10 @@ def main():
                 eage.undraw()
                 sage.undraw()
                 eage=Text(Point(200,250),int(statTime))
-                eage.setSize(20)
+                eage.setSize(40)
                 eage.setTextColor('white')
                 sage=Text(Point(1000,250),int(moveTime))
-                sage.setSize(20)
+                sage.setSize(40)
                 sage.setTextColor('white')
                 eage.draw(win)
                 sage.draw(win)
@@ -150,10 +153,10 @@ def main():
                     imgSpace.draw(win)
             else:
                 eage=Text(Point(200,250),int(statTime))
-                eage.setSize(20)
+                eage.setSize(40)
                 eage.setTextColor('white')
                 sage=Text(Point(1000,250),int(moveTime))
-                sage.setSize(20)
+                sage.setSize(40)
                 sage.setTextColor('white')
                 eage.draw(win)
                 sage.draw(win)
