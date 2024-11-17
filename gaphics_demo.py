@@ -20,7 +20,7 @@ def main():
 
     def buttons(x,y):
         Submitbutton = Rectangle(Point(x,y), Point (x+30,y-30))
-        Submitbutton.setF ill(color_rgb(255,0,0))
+        Submitbutton.setFill(color_rgb(255,0,0))
         Submitbutton.draw(win)
         return Submitbutton
 
