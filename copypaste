@@ -1,0 +1,34 @@
+win = GraphWin('kathy orbiting earth', 1000, 700)
+    win.setBackground(color_rgb(0,1,35))
+
+    pt = Point(300,300)
+    pt.setOutline('white')
+    pt.draw(win)
+
+    print(os.listdir(project_dir))
+
+    
+    earth = Image(Point(500,350),os.path.join(project_dir, "images Small.png"))
+    earth.draw(win)
+    kathy = Image(Point(1050,250),os.path.join(project_dir, 'ball.png'))
+    kathy.draw(win)
+
+    radius = 200
+    center_x, center_y = 500, 350
+    angle=0
+    orbit_speed = 5
+
+
+    while True:
+    
+        angle_rad = math.radians(angle)  
+        x = center_x + radius * math.cos(angle_rad)  
+        y = center_y + radius * math.sin(angle_rad)  
+   
+        kathy.move(x - kathy.getAnchor().getX(), y - kathy.getAnchor().getY())
+
+        angle += orbit_speed
+        if angle >= 360:
+            angle = 0
+
+        time.sleep(0.05)
