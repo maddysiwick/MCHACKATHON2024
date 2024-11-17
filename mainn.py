@@ -24,7 +24,7 @@ def checkAge(age):
 def main():
     win = GraphWin('My Window',1000,1000)
     win.setBackground('black')
-    allImages=['baby.png','smiley.png','man.png','old.png','skull.png','skull.png']
+    allImages=['kathybaby.PNG','kathy5.PNG','kathy10.PNG','kathy15.PNG','man.png','old.png','skull.png']
     moveTime=0.1 #second
     statTime=0.0
     v=250000000.0
