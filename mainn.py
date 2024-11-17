@@ -12,3 +12,4 @@ while statTime <= 100:
 
 print('move time ', moveTime)
 print('stat time ', statTime)
+
