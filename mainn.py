@@ -1,21 +1,26 @@
 import math
 import time
 from graphics import *
+
 def checkAge(age):
     if 90.0<=age:
-        return 7
+        return 9
     elif 75.0<=age<90:
-        return 6
-    elif 65.0<=age<75.0:
-        return 5
-    elif 55.0<=age<65.0:
+        return 8
+    elif 60.0<=age<75.0:
+        return 7
+    elif 45.0<=age<60.0:
         print('deaths door kathy works')
-        return 4
+        return 6
     elif 35.0<=age<45.0:
         print('old kathy works')
-        return 3
+        return 5
+    elif 25.0<=age<35.0:
+        return 4
     elif 15.0<=age<25.0:
         print('adult kathy works')
+        return 3
+    elif 10.0<=age<15.0:
         return 2
     elif 5.0<=age<10.0:
         print('teen kathy works fine')
@@ -88,7 +93,7 @@ def main():
         v=int(my_txt)
 
     if v>0:
-        allImages=['kathybaby.PNG','kathy5.PNG','kathy10.PNG','kathy15.PNG','man.png','old.png','skull.png']
+        allImages=['kathybaby.PNG','kathy5.PNG','kathy10.PNG','kathy15.PNG','kathy25.PNG','kathy35.PNG','kathy45.PNG','kathy60.PNG','kathy75.PNG','kathydead.PNG']
         moveTime=0.1 #second
         statTime=0.0
         c=3.0*10**8
