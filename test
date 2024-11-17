@@ -1,0 +1,58 @@
+from graphics import *
+import os
+import time
+import pygame
+import math
+
+project_dir = '/Users/Technovation/hackathon'
+
+def main():
+    
+    win = GraphWin('My Window', 1000, 700)
+
+    win.setBackground(color_rgb(0,1,35))
+
+    pt = Point(300,300)
+    pt.setOutline('white')
+    pt.draw(win)
+
+    print(os.listdir(project_dir))
+
+    earth = Image(Point(250,250),os.path.join(project_dir, "images Small.png"))
+    earth.draw(win)
+
+    kathy = Image(Point(700,250),os.path.join(project_dir, 'kathy Small.png'))
+    kathy.draw(win)
+
+ 
+    # variables
+    radius = 100
+    center_x, center_y = 250, 250
+    angle = 0
+
+    for i in range (360): 
+    # trig function    
+        angle_rad = math.radians(angle) 
+        x = center_x + radius * math.cos(angle_rad)
+        y = center_y + radius * math.sin(angle_rad)
+
+        kathy.move(x - kathy.getAnchor().getX(), y - kathy.getAnchor().getY())
+
+        angle += 1 
+
+        win.update()
+
+
+        
+
+    
+    win.getMouse()
+    win.close()
+
+
+
+
+main()
+
+
+
