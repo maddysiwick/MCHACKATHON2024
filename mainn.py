@@ -32,16 +32,16 @@ def checkAge(age):
 
 def main():
     v=0
-    win = GraphWin('My Window',1000,1000)
+    win = GraphWin('My Window',1200,1000)
     win.setBackground(color_rgb(19,28,62))
     
 
-    label = Text(Point(280,290), "Speed of the Kathy mobile:")
+    label = Text(Point(280,100), "Speed of the Kathy mobile:")
     label.setSize(20)
     label.setTextColor("white")
     label.draw(win)
 
-    noworkkathy = Text(Point(450,400),"The Kathy mobile cannot run at this speed, KATHY SLOW DOWN!")
+    noworkkathy = Text(Point(450,150),"The Kathy mobile cannot run at this speed, KATHY SLOW DOWN!")
     noworkkathy.setSize(20)
     noworkkathy.setTextColor("white")
 
@@ -54,7 +54,7 @@ def main():
         return Submitbutton
 
     #buttons()
-    button = buttons (500,350)
+    button = buttons (500,200)
     
     
 
@@ -62,7 +62,8 @@ def main():
 
     #create our objects
 
-    input_box = Entry(Point(520,290),30)
+    input_box = Entry(Point(520,100),30)
+    input_box.setFill('white')
     input_box.draw(win)
     #txt = Text(Point(370,280),"")
     #txt.draw(win)
@@ -72,7 +73,7 @@ def main():
        
        click_point = win.getMouse()
 
-       if 500 <= click_point.getX() <= 530 and 320 <= click_point.getY() <=350:
+       if 500 <= click_point.getX() <= 530 and 170 <= click_point.getY() <=200:
             break 
        
     
@@ -81,7 +82,7 @@ def main():
 
     my_txt = input_box.getText()
 
-    yesworkkathy = Text(Point(450,400), "Kathy is now speeding around the Earth at " + my_txt + " km/s")
+    yesworkkathy = Text(Point(450,150), "Kathy is now speeding around the Earth at " + my_txt + " km/s")
     yesworkkathy.setSize(20)
     yesworkkathy.setTextColor("white")
     
